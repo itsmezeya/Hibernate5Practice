@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-//@Table(name="items")
+//@Table(name="items")  optional
 public class Product {
 	@Id
 	//@Column(name="productId")
