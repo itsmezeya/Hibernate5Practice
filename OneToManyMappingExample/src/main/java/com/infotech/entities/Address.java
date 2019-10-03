@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 public class Address {
 
 	@Id
-	@Column(name="address_id")
+	@Column(name="adress_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer addressId;
 	
@@ -49,6 +50,7 @@ public class Address {
 	public void setPincode(Long pincode) {
 		this.pincode = pincode;
 	}
+	
 	@Override
 	public String toString() {
 		return "Address [street=" + street + ", city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
